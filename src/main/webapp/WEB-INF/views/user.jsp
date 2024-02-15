@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>User Home Page</title>
 </head>
-<body>
+<body align = "center">
 <h3>Hi ${userName}</h3>
     <form action="bmi" method="post">
         <label>Height: </label>
-        <input type="text" name="height"><br>
+        <input type="text" name="height"><br><br>
 
         <label>Weight: </label>
-        <input type="text" name="weight"></br>
+        <input type="text" name="weight"></br><br>
 
         <input type="submit" value="Get BMI">
     </form>

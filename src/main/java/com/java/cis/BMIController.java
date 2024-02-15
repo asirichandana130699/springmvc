@@ -13,9 +13,8 @@ public class BMIController {
     @RequestMapping(value = "/bmi", method = RequestMethod.POST)
     public String calculateBMI(@Validated User user, Model model) {
         System.out.println("BMI calculator");
-        double bmiCalculator = user.getWeight() / (user.getHeight() * user.getHeight()) * 703;
+        double bmiCalculator = (double) Math.round((user.getWeight() / (user.getHeight() * user.getHeight()) * 703) * 100) / 100;
         model.addAttribute("bmiCalculator", bmiCalculator);
-        model.addAttribute("userName", user.getUserName());
         return "bmi";
     }
 }
